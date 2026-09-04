@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - EcoCart Essentials</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7fbf7;
+      color: #173b2a;
+    }
+
+    /* =========================
+       HEADER / NAVIGATION
+    ========================= */
+
+    .eco-header {
+      background: #123f2a;
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .eco-nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .eco-logo {
+      color: white;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .eco-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eco-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 8px 0;
+      transition: 0.2s ease;
+    }
+
+    .eco-links a:hover {
+      color: #8ee6a8;
+    }
+
+    .eco-links a.active {
+      color: #8ee6a8;
+    }
+
+    /* =========================
+       BLOG HERO
+    ========================= */
+
+    .blog-hero {
+      background: linear-gradient(135deg, #238b57, #176b62);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .blog-hero-inner {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .blog-hero h1 {
+      font-size: 48px;
+      margin: 0 0 22px;
+      line-height: 1.1;
+    }
+
+    .blog-hero p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin: 0 auto;
+    }
+
+    .affiliate-note {
+      margin-top: 25px !important;
+      font-size: 15px !important;
+      opacity: 0.95;
+    }
+
+    /* =========================
+       BLOG GRID
+    ========================= */
+
+    .blog-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 65px 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .blog-content {
+      padding: 25px;
+    }
+
+    .blog-content h2 {
+      font-size: 23px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+      color: #173b2a;
+    }
+
+    .blog-content p {
+      color: #53655b;
+      line-height: 1.65;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .blog-button {
+      display: inline-block;
+      background: #238b57;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .blog-button:hover {
+      background: #176b43;
+    }
+
+    .post-date {
+      display: block;
+      margin-top: 16px;
+      color: #7a887f;
+      font-size: 13px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .eco-footer {
+      background: #123f2a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .eco-footer p {
+      margin: 6px 0;
+      line-height: 1.6;
+    }
+
+    .eco-footer a {
+      color: #8ee6a8;
+      text-decoration: none;
+    }
+
+    .eco-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+      .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .eco-nav {
+        flex-direction: column;
+      }
+
+      .eco-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    /* =========================
+       PHONE
+    ========================= */
+
+    @media (max-width: 600px) {
+      .eco-logo {
+        font-size: 23px;
+      }
+
+      .eco-links {
+        gap: 15px;
+      }
+
+      .eco-links a {
+        font-size: 15px;
+      }
+
+      .blog-hero {
+        padding: 55px 18px;
+      }
+
+      .blog-hero h1 {
+        font-size: 36px;
+      }
+
+      .blog-hero p {
+        font-size: 17px;
+      }
+
+      .blog-container {
+        grid-template-columns: 1fr;
+        padding: 45px 18px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header class="eco-header">
+
+<div class="eco-nav">
+
+  <a href="./index.html" class="eco-logo">
+    EcoCart Essentials
+  </a>
+
+  <nav class="eco-links">
+
+    <a href="./index.html">
+      Home
+    </a>
+
+    <a href="./about.html">
+      About
+    </a>
+
+    <a href="./shop.html">
+      Shop
+    </a>
+
+    <a href="./blog.html" class="active">
+      Blog
+    </a>
+
+    <a href="./contact.html">
+      Contact
+    </a>
+
+  </nav>
+
+</div>
+
+  </header>
+
+  <!-- =========================
+       BLOG HERO
+  ========================= -->
+
+  <section class="blog-hero">
+
+<div class="blog-hero-inner">
+
+  <h1>
+    EcoCart Ideas & Inspiration
+  </h1>
+
+  <p>
+    Discover simple ways to make better choices for your home,
+    your wallet, and our planet.
+  </p>
+
+  <p class="affiliate-note">
+    As an Amazon Associate, Walmart Affiliate, and Target Partner,
+    we earn from qualifying purchases at no extra cost to you.
+  </p>
+
+</div>
+
+  </section>
+
+  <!-- =========================
+       BLOG POSTS
+  ========================= -->
+
+  <main class="blog-container">
+
+<!-- POST 1 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&q=80&w=900"
+    alt="Reusable household products"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Simple Swaps That Can Reduce Household Waste
+    </h2>
+
+    <p>
+      Small changes can make a big difference. Discover practical
+      reusable alternatives that can help reduce the amount of
+      disposable waste your household creates.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      Explore Eco-Friendly Products →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 2 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=900"
+    alt="Modern eco-friendly kitchen"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Creating a More Sustainable Kitchen
+    </h2>
+
+    <p>
+      From reusable food storage to durable kitchen tools, there are
+      many simple ways to reduce plastic and make your kitchen more
+      environmentally friendly.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      Shop Kitchen Favorites →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 3 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=900"
+    alt="Green plant and sustainable living"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Why Reusable Products Are Worth the Investment
+    </h2>
+
+    <p>
+      Reusable products can cost a little more upfront, but quality
+      items can last for years while helping reduce the need for
+      disposable replacements.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      See Our Recommendations →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 4 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=900"
+    alt="Recycling and sustainability"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Recycling Is Important — But Reducing Waste Comes First
+    </h2>
+
+    <p>
+      Recycling is valuable, but reducing unnecessary consumption
+      and reusing products can be even more effective ways to lower
+      the amount of waste we produce.
+    </p>
+
+    <a href="./about.html" class="blog-button">
+      Learn About Our Mission →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 5 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=900"
+    alt="Organized sustainable home"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Build a Greener Home One Choice at a Time
+    </h2>
+
+    <p>
+      You don't need to completely change your lifestyle to live
+      more sustainably. Start with the products you use every day
+      and gradually make better choices.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      Find Better Everyday Products →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 6 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=900"
+    alt="Fresh produce and sustainable shopping"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Shop Smarter Without Giving Up Convenience
+    </h2>
+
+    <p>
+      Sustainable living doesn't have to be complicated. Learn how
+      thoughtful shopping decisions can help you choose products
+      that are useful, durable, and better suited to everyday life.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      Visit the EcoCart Shop →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 7 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&q=80&w=900"
+    alt="Green plants representing sustainable living"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      5 Easy Habits for a More Eco-Friendly Lifestyle
+    </h2>
+
+    <p>
+      Reuse what you already have, avoid unnecessary purchases,
+      choose durable products, reduce single-use plastics, and
+      recycle responsibly.
+    </p>
+
+    <a href="./about.html" class="blog-button">
+      Discover EcoCart →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 8 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=900"
+    alt="Clean organized home"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Quality Over Quantity: Buying Products That Last
+    </h2>
+
+    <p>
+      Choosing well-made products that serve a purpose for years
+      can help reduce waste while saving money over time.
+    </p>
+
+    <a href="./shop.html" class="blog-button">
+      Shop Durable Choices →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+
+<!-- POST 9 -->
+
+<article class="blog-card">
+
+  <img
+    src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=900"
+    alt="Plants and environmentally friendly living"
+  >
+
+  <div class="blog-content">
+
+    <h2>
+      Making Sustainability Part of Everyday Life
+    </h2>
+
+    <p>
+      The goal isn't perfection. It's making practical choices that
+      gradually reduce waste and create a healthier relationship
+      with the products we buy and use.
+    </p>
+
+    <a href="./contact.html" class="blog-button">
+      Contact EcoCart →
+    </a>
+
+    <span class="post-date">
+      EcoCart Essentials • September 2026
+    </span>
+
+  </div>
+
+</article>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="eco-footer">
+
+<p>
+  © 2026 EcoCart Essentials •
+  <a href="./contact.html">
+    Contact Us
+  </a>
+</p>
+
+<p class="footer-note">
+  As an Amazon Associate, Walmart Affiliate, and Target Partner,
+  we earn from qualifying purchases.
+</p>
+
+  </footer>
+
+</body>
+</html>
