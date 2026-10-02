@@ -1,895 +1,718 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Shop Eco-Friendly Products | EcoCart Essentials</title>
+    <title>Shop Reusable Product Categories | EcoCart Essentials</title>
 
-<meta
-name="description"
-content="Shop thoughtfully selected eco-friendly products and useful home and kitchen essentials from trusted retailers."
+    
 
->
+    
 
-  <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+    <style>
+        .category-card {
+            transition: all 0.3s ease;
+        }
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-image {
+            transition: transform 0.4s ease;
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.06);
+        }
+    </style>
+<meta name="description" content="Browse twelve product categories for kitchen, cleaning, home, garden, pets, laundry, travel, and everyday reusable essentials."><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#123f2a"><meta property="og:type" content="website"><meta property="og:site_name" content="EcoCart Essentials"><meta property="og:title" content="Shop Reusable Product Categories | EcoCart Essentials"><meta property="og:description" content="Browse twelve product categories for kitchen, cleaning, home, garden, pets, laundry, travel, and everyday reusable essentials."><meta name="twitter:card" content="summary"><link rel="stylesheet" href="css/site-enhancements.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Shop Reusable Product Categories | EcoCart Essentials", "description": "Browse twelve product categories for kitchen, cleaning, home, garden, pets, laundry, travel, and everyday reusable essentials.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "EcoCart Essentials"}, "publisher": {"@type": "Organization", "name": "EcoCart Essentials"}}</script></head>
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- =========================================================
-       NAVIGATION
-  ========================================================== -->
-
-  <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
-
-<div class="max-w-7xl mx-auto px-6 py-4">
-
-  <div class="flex justify-between items-center">
-
-    <a
-      href="./index.html"
-      class="text-2xl md:text-3xl font-bold tracking-wide"
-    >
-      <i class="fa-solid fa-leaf text-green-400 mr-2"></i>
-      EcoCart Essentials
-    </a>
-
-    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-
-      <a
-        href="./index.html"
-        class="hover:text-green-400 transition"
-      >
-        Home
-      </a>
-
-      <a
-        href="./about.html"
-        class="hover:text-green-400 transition"
-      >
-        About
-      </a>
-
-      <a
-        href="./shop.html"
-        class="text-green-400"
-      >
-        Shop
-      </a>
-
-      <a
-        href="./blog.html"
-        class="hover:text-green-400 transition"
-      >
-        Blog
-      </a>
-
-      <a
-        href="./contact.html"
-        class="hover:text-green-400 transition"
-      >
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
-
-</div>
-
-  </header>
-
-  <!-- =========================================================
-       SHOP HERO
-  ========================================================== -->
-
-  <section
-    class="relative py-20 md:py-28 text-white text-center overflow-hidden"
-    style="
-      background:
-      linear-gradient(rgba(0,70,45,0.78), rgba(0,45,30,0.88)),
-      url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1800&q=85')
-      center/cover no-repeat;
-    "
-  >
-
-<div class="max-w-5xl mx-auto px-6">
-
-  <div
-    class="inline-flex items-center justify-center
-           w-16 h-16 rounded-full
-           bg-white/15 backdrop-blur-sm
-           mb-6"
-  >
-    <i class="fa-solid fa-bag-shopping text-3xl text-green-300"></i>
-  </div>
-
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-    Shop EcoCart Essentials
-  </h1>
-
-  <p class="text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
-    Thoughtfully selected products for a greener home
-    and a smarter kitchen.
-  </p>
-
-  <div class="mt-8 flex flex-wrap justify-center gap-3">
-
-    <span
-      class="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full"
-    >
-      <i class="fa-solid fa-leaf mr-2 text-green-300"></i>
-      Eco-Friendly
-    </span>
-
-    <span
-      class="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full"
-    >
-      <i class="fa-solid fa-house mr-2 text-green-300"></i>
-      Home & Kitchen
-    </span>
-
-    <span
-      class="bg-white/15 backdrop-blur-sm px-5 py-2 rounded-full"
-    >
-      <i class="fa-solid fa-recycle mr-2 text-green-300"></i>
-      Reusable
-    </span>
-
-  </div>
-
-  <p class="text-sm md:text-base mt-8 max-w-2xl mx-auto text-gray-200">
-    As an Amazon Associate, Walmart Affiliate, and Target Partner,
-    we earn from qualifying purchases at no additional cost to you.
-  </p>
-
-</div>
-
-  </section>
-
-  <!-- =========================================================
-       INTRODUCTION
-  ========================================================== -->
-
-  <section class="bg-white py-14">
-
-<div class="max-w-5xl mx-auto px-6 text-center">
-
-  <span
-    class="text-green-600 font-semibold uppercase
-           tracking-wider text-sm"
-  >
-    Shop With Purpose
-  </span>
-
-  <h2
-    class="text-3xl md:text-4xl font-bold
-           text-gray-900 mt-3 mb-5"
-  >
-    Better Choices Start With Small Changes
-  </h2>
-
-  <p
-    class="text-gray-600 text-lg leading-relaxed
-           max-w-3xl mx-auto"
-  >
-    We've organized our favorite finds into simple categories
-    to help you discover useful products without making shopping
-    complicated. From reusable kitchen essentials to practical
-    household tools, every product is selected with everyday
-    living in mind.
-  </p>
-
-</div>
-
-  </section>
-
-  <!-- =========================================================
-       PRODUCTS
-  ========================================================== -->
-
-  <main class="max-w-7xl mx-auto px-6 py-16">
-
-<!-- =========================================================
-     ECO-FRIENDLY PRODUCTS
-========================================================== -->
-
-<section class="mb-24">
-
-  <div class="text-center mb-12">
-
-    <div
-      class="inline-flex items-center justify-center
-             w-16 h-16 rounded-full
-             bg-green-100 text-green-700 mb-5"
-    >
-      <i class="fa-solid fa-seedling text-2xl"></i>
-    </div>
-
-    <h2
-      class="text-3xl md:text-4xl
-             font-bold text-green-700"
-    >
-      Eco-Friendly Products
-    </h2>
-
-    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
-      Simple reusable alternatives designed to help reduce
-      everyday waste.
-    </p>
-
-  </div>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <a class="eco-skip-link" href="#main-content">Skip to content</a><header class="eco-site-header"><div class="eco-site-nav"><a class="eco-site-brand" href="index.html">EcoCart Essentials</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html" aria-current="page">Shop</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></div></header><main id="main-content">
 
 
-  <div class="grid md:grid-cols-3 gap-8">
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="relative bg-green-800 text-white">
 
-
-    <!-- =====================================================
-         BAMBOO KITCHEN SET
-    ====================================================== -->
-
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
-
-      <div class="relative overflow-hidden">
-
-        <img
-          src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85"
-          alt="Bamboo kitchen utensils"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
-
-        <span
-          class="absolute top-4 left-4
-                 bg-green-600 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Eco Pick
-        </span>
-
-      </div>
-
-      <div class="p-7">
-
-        <div
-          class="flex items-center gap-2
-                 text-green-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-leaf"></i>
-          Sustainable Kitchen
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=80"
+                alt="Sustainable green lifestyle"
+                class="w-full h-full object-cover opacity-30" loading="lazy" decoding="async">
         </div>
 
-        <h3 class="text-2xl font-bold mb-3">
-          Bamboo Kitchen Set
-        </h3>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
 
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Natural reusable utensils that provide a practical
-          alternative to everyday plastic kitchen tools.
-        </p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Shop Eco-Friendly Products
+            </h1>
 
-        <div class="flex flex-col sm:flex-row gap-3">
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+                Discover sustainable products designed to help you live
+                greener, reduce waste, and make everyday choices better
+                for the planet.
+            </p>
 
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
+            <div class="inline-block bg-white text-green-800 px-6 py-3 rounded-full font-semibold shadow-lg">
+                <i class="fas fa-leaf mr-2"></i>
+                Better Products. Better Choices. Better Planet.
+            </div>
 
         </div>
 
-      </div>
-
-    </article>
+    </section>
 
 
-    <!-- =====================================================
-         REUSABLE GROCERY BAGS
-    ====================================================== -->
+    <!-- =========================
+         AFFILIATE DISCLOSURE
+    ========================== -->
+    <section class="bg-green-50 border-b border-green-100">
 
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
+        <div class="max-w-5xl mx-auto px-4 py-5 text-center">
 
-      <div class="relative overflow-hidden">
-
-        <img
-          src="https://images.pexels.com/photos/9869067/pexels-photo-9869067.jpeg?auto=compress&cs=tinysrgb&w=900"
-          alt="Generic reusable grocery bag"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
-
-        <span
-          class="absolute top-4 left-4
-                 bg-green-600 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Reusable
-        </span>
-
-      </div>
-
-      <div class="p-7">
-
-        <div
-          class="flex items-center gap-2
-                 text-green-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-recycle"></i>
-          Reduce Waste
-        </div>
-
-        <h3 class="text-2xl font-bold mb-3">
-          Reusable Grocery Bags
-        </h3>
-
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Durable and washable bags designed for everyday shopping
-          while helping reduce reliance on disposable bags.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-3">
-
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
+            <p class="text-sm text-gray-600">
+                <strong>Affiliate Disclosure:</strong>
+                Some products featured on EcoCart Essentials may contain
+                affiliate links. If you make a purchase through one of
+                these links, we may earn a small commission at no additional
+                cost to you. We only feature products that fit our focus
+                on sustainable and eco-friendly living.
+            </p>
 
         </div>
 
-      </div>
-
-    </article>
+    </section>
 
 
-    <!-- =====================================================
-         STAINLESS STEEL STRAWS
-    ====================================================== -->
+    <!-- =========================
+         INTRODUCTION
+    ========================== -->
+    <section class="py-16 bg-white">
 
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-      <div class="relative overflow-hidden">
+            <div class="text-green-600 text-4xl mb-5">
+                <i class="fas fa-earth-americas"></i>
+            </div>
 
-        <img
-          src="https://media.takealot.com/covers_images/e500c5c06562454bb4bd0adcaba70edc/s-zoom.file"
-          alt="Reusable stainless steel drinking straws"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-5">
+                Explore Our Eco-Friendly Categories
+            </h2>
 
-        <span
-          class="absolute top-4 left-4
-                 bg-green-600 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Reusable
-        </span>
-
-      </div>
-
-      <div class="p-7">
-
-        <div
-          class="flex items-center gap-2
-                 text-green-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-glass-water"></i>
-          Everyday Essential
-        </div>
-
-        <h3 class="text-2xl font-bold mb-3">
-          Stainless Steel Straws
-        </h3>
-
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Reusable and easy to clean, with a cleaning brush
-          included for convenient everyday use.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-3">
-
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
+            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                Whether you're looking to reduce plastic waste, save energy,
+                create a greener home, or find sustainable alternatives for
+                everyday products, we've organized our shop to make finding
+                the right products simple.
+            </p>
 
         </div>
 
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================================
-     HOME & KITCHEN
-========================================================== -->
+    <!-- =========================
+         CATEGORY GRID
+    ========================== -->
+    <section class="py-16 bg-gray-50">
 
-<section class="mb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <div class="text-center mb-12">
+            <div class="text-center mb-12">
 
-    <div
-      class="inline-flex items-center justify-center
-             w-16 h-16 rounded-full
-             bg-orange-100 text-orange-600 mb-5"
-    >
-      <i class="fa-solid fa-kitchen-set text-2xl"></i>
-    </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Shop by Category
+                </h2>
 
-    <h2
-      class="text-3xl md:text-4xl
-             font-bold text-green-700"
-    >
-      Home & Kitchen Gadgets
-    </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Choose a category below to discover sustainable products
+                    selected for everyday living.
+                </p>
 
-    <p class="text-gray-600 mt-3 max-w-2xl mx-auto">
-      Helpful tools designed to make everyday cooking and
-      home life easier and more efficient.
-    </p>
-
-  </div>
+            </div>
 
 
-  <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-    <!-- =====================================================
-         AIR FRYER
-    ====================================================== -->
+                <!-- =========================
+                     1. ECO KITCHEN
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
 
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Eco%20Kitchen/EcoCart_Kitchen_12_Images/bamboo-cutting-board.jpg"
+                            alt="Eco-friendly kitchen products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
 
-      <div class="relative overflow-hidden">
+                    <div class="p-6">
 
-        <img
-          src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85"
-          alt="Compact air fryer in a kitchen"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-utensils"></i>
+                        </div>
 
-        <span
-          class="absolute top-4 left-4
-                 bg-orange-500 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Kitchen Favorite
-        </span>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Kitchen
+                        </h3>
 
-      </div>
+                        <p class="text-gray-600 mb-6">
+                            Reusable and sustainable products to help reduce
+                            waste in your kitchen and make everyday cooking
+                            more environmentally friendly.
+                        </p>
 
-      <div class="p-7">
+                        <a href="shop_category/Eco_Ktichen.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
 
-        <div
-          class="flex items-center gap-2
-                 text-orange-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-fire"></i>
-          Easy Cooking
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     2. ECO CLEANING
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Eco%20Cleaning/EcoCart_Eco_Cleaning_12_Images/bamboo-cleaning-brushes.jpg"
+                            alt="Eco-friendly cleaning products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-spray-can-sparkles"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Cleaning
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Sustainable cleaning tools and reusable alternatives
+                            designed to help reduce waste while keeping your
+                            home clean.
+                        </p>
+
+                        <a href="shop_category/Eco_Cleaning.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     3. BATH & PERSONAL CARE
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Bath%20%26%20Personal%20Care/bath_personal_care_12_images/01-toothpaste-tablets.jpg"
+                            alt="Eco-friendly bath and personal care products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-bath"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Bath & Personal Care
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Sustainable personal care products and reusable
+                            bathroom essentials for a greener daily routine.
+                        </p>
+
+                        <a href="shop_category/bath_personal_care.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     4. ECO HOME
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Eco%20Home/eco_home_12_images/01-bamboo-cutting-boards.jpg"
+                            alt="Eco-friendly home products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-house"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Home
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Practical sustainable products that can help make
+                            your home more efficient, reusable, and planet-friendly.
+                        </p>
+
+                        <a href="shop_category/Eco_Home.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     5. GARDEN & PLANTS
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Garden%20%26%20Plants/garden_plants_12_images/01-biodegradable-plant-pots.jpg"
+                            alt="Eco-friendly gardening products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Garden & Plants
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Sustainable gardening tools and products for growing
+                            plants while caring for the environment.
+                        </p>
+
+                        <a href="shop_category/Garden_Plants.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     6. REUSABLE EVERYDAY
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Reusable%20Everyday/reusable/reusable_essentials_12_images/01-stainless-steel-water-bottle.jpg"
+                            alt="Reusable everyday products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Reusable Everyday
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Everyday reusable alternatives designed to help
+                            reduce single-use products and unnecessary waste.
+                        </p>
+
+                        <a href="shop_category/Reusable_Everyday.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     7. ECO LAUNDRY
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Laundry/Eco_Laundry_12_Individual_Images/01_Wool_Dryer_Balls.png"
+                            alt="Eco-friendly laundry products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-shirt"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Laundry
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Sustainable laundry products and reusable solutions
+                            that help reduce waste in your laundry routine.
+                        </p>
+
+                        <a href="shop_category/Laundry.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     8. ECO PET
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Eco%20Pet/Eco_Pet_12_Individual_Images/01_Recycled_Material_Dog_Bowls.png"
+                            alt="Eco-friendly pet products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-paw"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Pet
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Sustainable and reusable products for pets and
+                            environmentally conscious pet owners.
+                        </p>
+
+                        <a href="shop_category/Eco_Pet.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     9. ENERGY SAVING
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Energy%20Saving/Eco_Energy_12_Individual_Images/01_LED_Light_Bulbs.png"
+                            alt="Energy saving products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Energy Saving
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Smart products that can help reduce energy use,
+                            improve efficiency, and create a more sustainable home.
+                        </p>
+
+                        <a href="shop_category/Energy_Saving.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     10. ECO AUTO
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Eco%20Auto/Eco_Car_12_Individual_Images/01_Reusable_Car_Cleaning_Cloths.png"
+                            alt="Eco-friendly automotive products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-car"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Eco Auto
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Useful products and accessories designed to help
+                            make vehicle ownership a little more sustainable.
+                        </p>
+
+                        <a href="shop_category/Eco_Auto.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     11. TRAVEL & OUTDOOR
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Travel%20%26%20Outdoor/sustainable_travel_12_images/01_stainless_steel_travel_bottle.png"
+                            alt="Eco-friendly travel and outdoor products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-person-hiking"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Travel & Outdoor
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Reusable and sustainable gear for travel,
+                            outdoor adventures, camping, and everyday exploration.
+                        </p>
+
+                        <a href="shop_category/Travel_Outdoor.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- =========================
+                     12. SUSTAINABLE LIVING
+                ========================== -->
+                <div class="category-card bg-white rounded-2xl overflow-hidden shadow-md">
+
+                    <div class="h-56 overflow-hidden">
+                        <img src="image/shop/Sustainable%20Living/sustainable_living_12_images/01_reusable_produce_bags.png"
+                            alt="Sustainable living products"
+                            class="category-image w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="p-6">
+
+                        <div class="text-green-600 text-3xl mb-3">
+                            <i class="fas fa-earth-americas"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3">
+                            Sustainable Living
+                        </h3>
+
+                        <p class="text-gray-600 mb-6">
+                            Discover practical products and ideas that can
+                            help you build a more sustainable lifestyle.
+                        </p>
+
+                        <a href="shop_category/Sustainable_Living.html"
+                            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg font-semibold transition">
+                            Shop This Category
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <h3 class="text-2xl font-bold mb-3">
-          Compact Air Fryer
-        </h3>
-
-        <p class="text-gray-600 leading-relaxed mb-6">
-          A convenient countertop option for quick meals
-          with little to no added oil.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-3">
-
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
-
-        </div>
-
-      </div>
-
-    </article>
+    </section>
 
 
-    <!-- =====================================================
-         VEGETABLE CHOPPER
-    ====================================================== -->
+    <!-- =========================
+         WHY SHOP ECO
+    ========================== -->
+    <section class="py-16 bg-white">
 
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="relative overflow-hidden">
+            <div class="text-center mb-12">
 
-        <img
-          src="https://rokbucket.rokomari.io/ProductNew20190903/260X372/Manual_Hand_Press_Food_Processor_Food_Ch-Non_Brand-b6ac4-472730.png"
-          alt="Kitchen vegetable chopper"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Why Choose Eco-Friendly Products?
+                </h2>
 
-        <span
-          class="absolute top-4 left-4
-                 bg-orange-500 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Time Saver
-        </span>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Small changes in everyday purchases can make a meaningful
+                    difference over time.
+                </p>
 
-      </div>
+            </div>
 
-      <div class="p-7">
 
-        <div
-          class="flex items-center gap-2
-                 text-orange-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-carrot"></i>
-          Kitchen Helper
-        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
-        <h3 class="text-2xl font-bold mb-3">
-          Multi-Function Chopper
-        </h3>
+                <div class="p-6">
 
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Chop, dice, and prepare ingredients quickly while
-          simplifying everyday meal preparation.
-        </p>
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-trash-arrow-up"></i>
+                    </div>
 
-        <div class="flex flex-col sm:flex-row gap-3">
+                    <h3 class="text-xl font-bold mb-3">
+                        Reduce Waste
+                    </h3>
 
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
+                    <p class="text-gray-600">
+                        Choose reusable alternatives that can help reduce
+                        dependence on disposable products.
+                    </p>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
+                </div>
+
+
+                <div class="p-6">
+
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Live Greener
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Find practical products that make sustainable living
+                        easier and more convenient.
+                    </p>
+
+                </div>
+
+
+                <div class="p-6">
+
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Help the Planet
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Making thoughtful purchasing decisions can contribute
+                        to a cleaner and more sustainable future.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-      </div>
-
-    </article>
+    </section>
 
 
-    <!-- =====================================================
-         SILICONE BAKING MATS
-    ====================================================== -->
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+    <section class="bg-green-700 text-white py-16">
 
-    <article
-      class="bg-white rounded-2xl shadow-md overflow-hidden
-             hover:shadow-2xl transition duration-300 group"
-    >
+        <div class="max-w-4xl mx-auto px-4 text-center">
 
-      <div class="relative overflow-hidden">
+            <h2 class="text-3xl md:text-4xl font-bold mb-5">
+                Ready to Make a Greener Choice?
+            </h2>
 
-        <img
-          src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?auto=format&fit=crop&w=900&q=85"
-          alt="Reusable silicone baking mat"
-          class="w-full h-60 object-cover
-                 group-hover:scale-105 transition duration-500"
-        >
+            <p class="text-lg mb-8">
+                Explore our categories and discover simple products that
+                can help make sustainable living part of your everyday life.
+            </p>
 
-        <span
-          class="absolute top-4 left-4
-                 bg-green-600 text-white
-                 px-4 py-2 rounded-full
-                 text-sm font-semibold"
-        >
-          Reusable
-        </span>
-
-      </div>
-
-      <div class="p-7">
-
-        <div
-          class="flex items-center gap-2
-                 text-green-600 text-sm font-semibold mb-3"
-        >
-          <i class="fa-solid fa-cookie-bite"></i>
-          Bake Smarter
-        </div>
-
-        <h3 class="text-2xl font-bold mb-3">
-          Silicone Baking Mats
-        </h3>
-
-        <p class="text-gray-600 leading-relaxed mb-6">
-          Reusable non-stick baking mats that can help reduce
-          the need for disposable parchment paper.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-3">
-
-          <a
-            href="#"
-            class="flex-1 text-center border-2
-                   border-green-600 text-green-700
-                   px-5 py-3 rounded-full font-semibold
-                   hover:bg-green-50 transition"
-          >
-            View Details
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 text-center bg-green-600
-                   text-white px-5 py-3 rounded-full
-                   font-semibold hover:bg-green-700 transition"
-          >
-            Shop Now →
-          </a>
+            <a href="about.html"
+                class="inline-block bg-white text-green-700 hover:bg-gray-100 px-7 py-3 rounded-lg font-bold transition">
+                Learn More About Us
+            </a>
 
         </div>
 
-      </div>
+    </section>
 
-    </article>
 
-  </div>
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <section class="eco-answer-section" aria-label="Common questions"><h2>Questions about EcoCart</h2><details><summary>Can I buy these products here?</summary><p>Retailer links are being prepared. Once those links are available, purchases will be completed on the retailer’s website, where current prices, availability, returns, and product specifications are shown.</p></details><details><summary>Are the product pictures exact retailer photos?</summary><p>The current category pictures are illustrative. When shopping links are added, check the retailer listing to confirm the exact product, materials, dimensions, and what is included.</p></details><details><summary>Does reusable always mean more sustainable?</summary><p>No. Materials, production, transport, cleaning, disposal, and how often you use an item all matter. Start by using what you already own and choose replacements for a specific need.</p></details></section></main><footer class="eco-site-footer"><div><a class="eco-site-brand" href="index.html">EcoCart Essentials</a><p>Practical ideas for using what you have, choosing thoughtfully, and reducing everyday waste.</p><nav aria-label="Footer navigation"><a href="shop.html">Shop categories</a><a href="blog.html">Living guides</a><a href="about.html">About us</a><a href="contact.html">Contact</a><a href="editorial-policy.html">How we choose products</a><a href="privacy.html">Privacy</a></nav><p>EcoCart is preparing to add retailer affiliate links. Product pictures are illustrative; confirm exact specifications with the retailer when links become available.</p><p>© 2026 EcoCart Essentials.</p></div></footer>
 
-</section>
 
-  </main>
-
-  <!-- =========================================================
-       SHOP WITH CONFIDENCE
-  ========================================================== -->
-
-  <section class="bg-green-700 text-white py-16">
-
-<div class="max-w-5xl mx-auto px-6 text-center">
-
-  <div
-    class="inline-flex items-center justify-center
-           w-16 h-16 rounded-full
-           bg-white/10 mb-6"
-  >
-    <i class="fa-solid fa-heart text-2xl"></i>
-  </div>
-
-  <h2 class="text-3xl md:text-4xl font-bold mb-5">
-    Shop Smarter. Live Better.
-  </h2>
-
-  <p
-    class="text-lg text-green-50
-           max-w-3xl mx-auto leading-relaxed"
-  >
-    EcoCart Essentials makes it easier to discover useful
-    products for your home and kitchen while keeping
-    thoughtful, sustainable living in mind.
-  </p>
-
-  <div class="mt-8">
-
-    <a
-      href="./about.html"
-      class="inline-block bg-white text-green-700
-             px-8 py-4 rounded-full font-bold
-             hover:bg-gray-100 transition"
-    >
-      Learn More About EcoCart
-      <i class="fa-solid fa-arrow-right ml-2"></i>
-    </a>
-
-  </div>
-
-</div>
-
-  </section>
-
-  <!-- =========================================================
-       AFFILIATE DISCLOSURE
-  ========================================================== -->
-
-  <section class="bg-gray-100 py-8">
-
-<div class="max-w-4xl mx-auto px-6 text-center">
-
-  <p
-    class="text-sm text-gray-600
-           leading-relaxed"
-  >
-
-    <i class="fa-solid fa-circle-info text-green-600 mr-1"></i>
-
-    <strong>Affiliate Disclosure:</strong>
-    EcoCart Essentials may earn a commission from qualifying
-    purchases made through links on this website. This comes
-    at no additional cost to you.
-
-  </p>
-
-</div>
-
-  </section>
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
-
-  <footer class="bg-gray-900 text-white py-10">
-
-<div class="max-w-6xl mx-auto px-6 text-center">
-
-  <div class="text-2xl font-bold mb-4">
-
-    <i class="fa-solid fa-leaf text-green-400 mr-2"></i>
-    EcoCart Essentials
-
-  </div>
-
-  <div
-    class="flex justify-center flex-wrap
-           gap-6 text-sm mb-6"
-  >
-
-    <a
-      href="./index.html"
-      class="hover:text-green-400 transition"
-    >
-      Home
-    </a>
-
-    <a
-      href="./about.html"
-      class="hover:text-green-400 transition"
-    >
-      About
-    </a>
-
-    <a
-      href="./shop.html"
-      class="text-green-400"
-    >
-      Shop
-    </a>
-
-    <a
-      href="./blog.html"
-      class="hover:text-green-400 transition"
-    >
-      Blog
-    </a>
-
-    <a
-      href="./contact.html"
-      class="hover:text-green-400 transition"
-    >
-      Contact
-    </a>
-
-  </div>
-
-  <p class="text-sm text-gray-400">
-    © 2026 EcoCart Essentials. All rights reserved.
-  </p>
-
-  <p class="text-xs text-gray-500 mt-3">
-    As an Amazon Associate, Walmart Affiliate, and Target Partner,
-    we earn from qualifying purchases.
-  </p>
-
-</div>
-
-  </footer>
+    <!-- =========================
+         MOBILE MENU SCRIPT
+    ========================== -->
+    
 
 </body>
+
 </html>

@@ -5,12 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Us - EcoCart Essentials</title>
+  <title>Contact EcoCart Essentials | Questions &amp; Suggestions</title>
 
-  <meta
-    name="description"
-    content="Contact EcoCart Essentials with questions, suggestions, product ideas, or business inquiries."
-  >
+  
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,80 +19,19 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
-</head>
+<meta name="description" content="Contact EcoCart Essentials with website questions, product suggestions, or corrections. Find our email address and message form."><meta name="robots" content="index,follow,max-image-preview:large"><meta name="theme-color" content="#123f2a"><meta property="og:type" content="website"><meta property="og:site_name" content="EcoCart Essentials"><meta property="og:title" content="Contact EcoCart Essentials | Questions &amp; Suggestions"><meta property="og:description" content="Contact EcoCart Essentials with website questions, product suggestions, or corrections. Find our email address and message form."><meta name="twitter:card" content="summary"><link rel="stylesheet" href="css/site-enhancements.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact EcoCart Essentials | Questions & Suggestions", "description": "Contact EcoCart Essentials with website questions, product suggestions, or corrections. Find our email address and message form.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "EcoCart Essentials"}, "publisher": {"@type": "Organization", "name": "EcoCart Essentials"}}</script></head>
 
 
 <body class="bg-gray-50 text-gray-800">
 
 
-  <!-- =====================================================
-       NAVIGATION
-  ====================================================== -->
 
-  <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
 
-    <div class="max-w-7xl mx-auto px-6 py-4">
+<a class="eco-skip-link" href="#main-content">Skip to content</a><header class="eco-site-header"><div class="eco-site-nav"><a class="eco-site-brand" href="index.html">EcoCart Essentials</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="blog.html">Blog</a><a href="contact.html" aria-current="page">Contact</a></nav></div></header>
 
-      <div class="flex justify-between items-center">
-
-        <!-- Logo -->
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="shop.html">Shop</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-          class="text-2xl md:text-3xl font-bold tracking-wide"
-        >
-          <i class="fa-solid fa-leaf text-green-400 mr-2"></i>
-          EcoCart Essentials
-        </a>
-
-
-        <!-- Navigation -->
-        <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
-
-          <a
-            href="index.html"
-            class="hover:text-green-400 transition"
-          >
-            Home
-          </a>
-
-          <a
-            href="about.html"
-            class="hover:text-green-400 transition"
-          >
-            About
-          </a>
-
-          <a
-            href="shop.html"
-            class="hover:text-green-400 transition"
-          >
-            Shop
-          </a>
-
-          <a
-            href="blog.html"
-            class="hover:text-green-400 transition"
-          >
-            Blog
-          </a>
-
-          <a
-            href="contact.html"
-            class="text-green-400 border-b-2 border-green-400 pb-1"
-          >
-            Contact
-          </a>
-
-        </nav>
-
-      </div>
-
-    </div>
-
-  </header>
 
 
 
@@ -225,13 +161,13 @@
 
         <!-- RIGHT SIDE - GENERATED IMAGE -->
 
-        <div class="min-h-[420px] lg:min-h-[600px]">
+        <div class="eco-contact-photo">
 
           <img
-            src="images/contact-hero.png"
-            alt="Eco-conscious customer support specialist working at a computer"
-            class="w-full h-full object-cover"
-          >
+            src="image/contact-hero.png"
+            alt="Illustrative portrait of a person working at a computer"
+            class="eco-contact-photo-image"
+           loading="eager" fetchpriority="high" decoding="async">
 
         </div>
 
@@ -247,7 +183,7 @@
        CONTACT AREA
   ====================================================== -->
 
-  <main class="max-w-7xl mx-auto px-6 py-16">
+  <main id="main-content" class="max-w-7xl mx-auto px-6 py-16">
 
 
     <div class="grid lg:grid-cols-3 gap-10">
@@ -289,17 +225,17 @@
 
         <!--
           IMPORTANT:
-          Replace YOUR-EMAIL-HERE below with the email address
+          Replace whatisthetruthrudy@gmail.com below with the email address
           where you want to receive contact messages.
         -->
 
         <form
-          action="https://formsubmit.co/YOUR-EMAIL-HERE"
+          action="https://formsubmit.co/whatisthetruthrudy@gmail.com"
           method="POST"
           class="space-y-6"
         >
 
-          <!-- FormSubmit settings -->
+          <!-- FormSubmit settings --><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
           <input
             type="hidden"
@@ -345,7 +281,7 @@
 
                 <input
                   type="text"
-                  id="name"
+                  id="name" autocomplete="name" maxlength="120"
                   name="name"
                   required
                   placeholder="Your name"
@@ -381,7 +317,7 @@
 
                 <input
                   type="email"
-                  id="email"
+                  id="email" autocomplete="email" maxlength="254"
                   name="email"
                   required
                   placeholder="you@example.com"
@@ -421,7 +357,7 @@
 
               <input
                 type="text"
-                id="subject"
+                id="subject" maxlength="160"
                 name="subject"
                 required
                 placeholder="What can we help you with?"
@@ -457,7 +393,7 @@
               ></i>
 
               <textarea
-                id="message"
+                id="message" maxlength="5000"
                 name="message"
                 rows="7"
                 required
@@ -500,11 +436,11 @@
 
             <i class="fa-solid fa-lock mr-1"></i>
 
-            Your information is used only to respond to your message.
+            Your message is sent through FormSubmit so we can respond. Please read our privacy information and avoid sending sensitive personal information.
 
           </p>
 
-        </form>
+        <p class="text-sm mt-4">Prefer email? <a href="mailto:whatisthetruthrudy@gmail.com" class="text-green-800 underline">whatisthetruthrudy@gmail.com</a>. <a href="privacy.html" class="text-green-800 underline">Privacy information</a>.</p></form>
 
       </section>
 
@@ -544,9 +480,7 @@
 
             <div>
 
-              <h3 class="font-bold text-gray-900">
-                Email Us
-              </h3>
+              <h3 class="font-bold text-gray-900"><a href="mailto:whatisthetruthrudy@gmail.com">Email Us</a></h3>
 
               <p class="text-gray-600 text-sm mt-1">
                 Have a question?
@@ -723,80 +657,7 @@
        FOOTER
   ====================================================== -->
 
-  <footer class="bg-gray-900 text-white py-10">
-
-    <div class="max-w-6xl mx-auto px-6 text-center">
-
-
-      <!-- Logo -->
-
-      <div class="text-2xl font-bold mb-4">
-
-        <i class="fa-solid fa-leaf text-green-400 mr-2"></i>
-
-        EcoCart Essentials
-
-      </div>
-
-
-      <!-- Footer Navigation -->
-
-      <div
-        class="flex justify-center flex-wrap
-               gap-6 text-sm mb-6"
-      >
-
-        <a
-          href="index.html"
-          class="hover:text-green-400 transition"
-        >
-          Home
-        </a>
-
-        <a
-          href="about.html"
-          class="hover:text-green-400 transition"
-        >
-          About
-        </a>
-
-        <a
-          href="shop.html"
-          class="hover:text-green-400 transition"
-        >
-          Shop
-        </a>
-
-        <a
-          href="blog.html"
-          class="hover:text-green-400 transition"
-        >
-          Blog
-        </a>
-
-        <a
-          href="contact.html"
-          class="text-green-400"
-        >
-          Contact
-        </a>
-
-      </div>
-
-
-      <p class="text-sm text-gray-400">
-        © 2026 EcoCart Essentials. All rights reserved.
-      </p>
-
-
-      <p class="text-xs text-gray-500 mt-3">
-        As an Amazon Associate, Walmart Affiliate, and Target Partner,
-        we earn from qualifying purchases.
-      </p>
-
-    </div>
-
-  </footer>
+  <footer class="eco-site-footer"><div><a class="eco-site-brand" href="index.html">EcoCart Essentials</a><p>Practical ideas for using what you have, choosing thoughtfully, and reducing everyday waste.</p><nav aria-label="Footer navigation"><a href="shop.html">Shop categories</a><a href="blog.html">Living guides</a><a href="about.html">About us</a><a href="contact.html">Contact</a><a href="editorial-policy.html">How we choose products</a><a href="privacy.html">Privacy</a></nav><p>EcoCart is preparing to add retailer affiliate links. Product pictures are illustrative; confirm exact specifications with the retailer when links become available.</p><p>© 2026 EcoCart Essentials.</p></div></footer>
 
 
 </body>
