@@ -6,6 +6,11 @@
   const title = document.getElementById('product-title');
   const summary = document.getElementById('selected-product');
   const emailLink = document.getElementById('email-request');
+  const prepare = document.getElementById('prepare-email');
+  const preview = document.getElementById('email-preview');
+  const openEmail = document.getElementById('open-request-email');
+  const requestText = document.getElementById('request-email-text');
+  prepare.disabled = false;
   const supplied = new URLSearchParams(location.search).get('product');
   if (supplied && Array.from(product.options).some(option => option.value === supplied)) {
     product.value = supplied;
@@ -21,8 +26,29 @@
   }
   product.addEventListener('change', updateProduct);
   updateProduct();
-  form.addEventListener('submit', () => {
-    // The receiving service handles delivery. Do not claim a successful email or payment here.
+  form.addEventListener('submit', event => {
+    event.preventDefault();
     updateProduct();
+    const data = new FormData(form);
+    const subject = 'Second-option quote request — ' + product.value;
+    const body = [
+      'QUOTE REQUEST ONLY — not a purchase or payment.',
+      '',
+      'Product: ' + title.value,
+      'Reference: ' + product.value,
+      'Name: ' + data.get('name'),
+      'Reply email: ' + data.get('email'),
+      'Delivery state: ' + data.get('delivery_state'),
+      'Delivery ZIP: ' + data.get('delivery_zip'),
+      'Quantity: ' + data.get('quantity'),
+      'Preferred total budget: ' + (data.get('preferred_budget') || 'Not specified'),
+      'Preferences: ' + (data.get('preferences') || 'Not specified'),
+      '',
+      'Please confirm the exact item, availability, full delivered price and return terms before any payment.'
+    ].join('\n');
+    requestText.value = 'Subject: ' + subject + '\n\n' + body;
+    openEmail.href = 'mailto:whatisthetruthrudy@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    preview.hidden = false;
+    preview.focus();
   });
 })();
