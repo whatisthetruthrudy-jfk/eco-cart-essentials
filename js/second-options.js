@@ -9,6 +9,7 @@
   const prepare = document.getElementById('prepare-email');
   const preview = document.getElementById('email-preview');
   const openEmail = document.getElementById('open-request-email');
+  const gmailLink = document.getElementById('open-request-gmail');
   const requestText = document.getElementById('request-email-text');
   prepare.disabled = false;
   const supplied = new URLSearchParams(location.search).get('product');
@@ -48,6 +49,9 @@
     ].join('\n');
     requestText.value = 'Subject: ' + subject + '\n\n' + body;
     openEmail.href = 'mailto:whatisthetruthrudy@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    const gmail = new URL('https://mail.google.com/mail/');
+    gmail.search = new URLSearchParams({view:'cm', fs:'1', to:'whatisthetruthrudy@gmail.com', su:subject, body:body}).toString();
+    gmailLink.href = gmail.href;
     preview.hidden = false;
     preview.focus();
   });
